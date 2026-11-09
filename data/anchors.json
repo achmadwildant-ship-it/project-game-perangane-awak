@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "model": "public/model/karakter-wildan-byNesya.glb",
+  "unit": "Local coordinates of the NORMALIZED model: scale = 1.75 / original_height; x and z centered on the bounding-box center; minimum y = 0 (soles on the floor); model faces +Z.",
+  "note": "Initial positions are ESTIMATES derived from the model geometry and can be off by a few centimeters. Refine them with the dev-only /anchor-editor and verify with /anchor-check. Redo them if the model file is replaced.",
+  "normalization": {
+    "original_height": 1.717,
+    "scale": 1.01921,
+    "original_center_x": 0.00012,
+    "original_center_z": 0.00212,
+    "original_min_y": -0.85854
+  },
+  "anchors": {
+    "rikma": {
+      "position": [
+        -0.004,
+        1.75,
+        0.025
+      ],
+      "radius": 0.05,
+      "status": "estimate"
+    },
+    "mustaka": {
+      "position": [
+        -0.018,
+        1.657,
+        0.122
+      ],
+      "radius": 0.05,
+      "status": "estimate"
+    },
+    "soca": {
+      "position": [
+        0.04,
+        1.626,
+        0.094
+      ],
+      "radius": 0.03,
+      "status": "estimate"
+    },
+    "grana": {
+      "position": [
+        -0.0,
+        1.57,
+        0.138
+      ],
+      "radius": 0.03,
+      "status": "estimate"
+    },
+    "lathi": {
+      "position": [
+        -0.004,
+        1.539,
+        0.114
+      ],
+      "radius": 0.03,
+      "status": "estimate"
+    },
+    "jangga": {
+      "position": [
+        -0.01,
+        1.476,
+        0.093
+      ],
+      "radius": 0.05,
+      "status": "estimate"
+    },
+    "talingan": {
+      "position": [
+        0.108,
+        1.591,
+        -0.039
+      ],
+      "radius": 0.03,
+      "status": "estimate"
+    },
+    "padharan": {
+      "position": [
+        0.0,
+        1.03,
+        0.121
+      ],
+      "radius": 0.08,
+      "status": "estimate"
+    },
+    "asta": {
+      "position": [
+        0.485,
+        0.835,
+        0.088
+      ],
+      "radius": 0.05,
+      "status": "estimate"
+    },
+    "racikan": {
+      "position": [
+        0.118,
+        0.354,
+        -0.005
+      ],
+      "radius": 0.08,
+      "status": "estimate"
+    },
+    "jaja": {
+      "position": [
+        0.002,
+        1.274,
+        0.101
+      ],
+      "radius": 0.08,
+      "status": "estimate"
+    },
+    "ampeyan": {
+      "position": [
+        0.128,
+        0.017,
+        0.132
+      ],
+      "radius": 0.05,
+      "status": "estimate",
+      "note": "The sole faces down and is not visible from normal viewing angles. The initial point is on the top/side of the foot. See decision K-12 in DECISIONS.md."
+    },
+    "jengku": {
+      "position": [
+        0.106,
+        0.537,
+        0.047
+      ],
+      "radius": 0.05,
+      "status": "estimate"
+    },
+    "pamidhangan": {
+      "position": [
+        0.203,
+        1.361,
+        -0.006
+      ],
+      "radius": 0.06,
+      "status": "estimate"
+    }
+  }
+}

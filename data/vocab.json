@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "Perangane Awak - vocabulary data",
+    "version": "1.0-draft",
+    "word_count": 14,
+    "content_language": "Indonesian (explanations) and Javanese (vocabulary and example sentences). Do not translate the values.",
+    "note": "DRAFT. All Javanese content (equivalents, example sentences, hints) must be validated by a Javanese-language teacher or expert against a reference dictionary before students use it. Entries with validation_status 'needs_validation_high' contain unconfirmed assumptions.",
+    "anchors_file": "data/anchors.json holds the 3D position of every anchor_id.",
+    "distractor_rule": "Minimum separation between points is 0.15 units (fallback 0.10). At least 2 of the 4 distractors must come from a region different from the correct answer. See GAME_SPEC.md section 8.3.",
+    "regions": [
+      "head",
+      "torso",
+      "arm",
+      "leg"
+    ],
+    "validation_status_values": [
+      "needs_validation",
+      "needs_validation_high",
+      "validated"
+    ]
+  },
+  "words": [
+    {
+      "id": "rikma",
+      "word": "Rikma",
+      "body_part": "Rambut",
+      "region": "head",
+      "anchor_id": "anchor_rikma",
+      "ngoko": "rambut",
+      "krama": "rambut",
+      "krama_inggil": "rikma",
+      "definition": "Rambut adalah helaian halus yang tumbuh di kulit kepala. Rambut membantu melindungi kepala dari panas dan benturan ringan.",
+      "example": {
+        "javanese": "Ibu nyisir rikmanipun sakderengipun tindak dhateng pasar.",
+        "indonesian": "Ibu menyisir rambutnya sebelum pergi ke pasar."
+      },
+      "hint": "Bagian tubuh ini tumbuh di bagian paling atas kepala dan bisa disisir.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "mustaka",
+      "word": "Mustaka",
+      "body_part": "Kepala",
+      "region": "head",
+      "anchor_id": "anchor_mustaka",
+      "ngoko": "sirah",
+      "krama": "sirah",
+      "krama_inggil": "mustaka",
+      "definition": "Kepala adalah bagian tubuh paling atas. Di dalamnya ada otak, dan di bagian wajahnya ada mata, hidung, mulut, serta telinga.",
+      "example": {
+        "javanese": "Bapak ngagem topi ing mustakanipun.",
+        "indonesian": "Bapak memakai topi di kepalanya."
+      },
+      "hint": "Bagian tubuh ini berada di atas leher dan menjadi tempat tumbuhnya rambut.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "soca",
+      "word": "Soca",
+      "body_part": "Mata",
+      "region": "head",
+      "anchor_id": "anchor_soca",
+      "ngoko": "mripat",
+      "krama": "mripat",
+      "krama_inggil": "soca",
+      "definition": "Mata adalah alat penglihatan. Dengan mata kita dapat melihat bentuk, warna, dan benda di sekitar.",
+      "example": {
+        "javanese": "Eyang ngagem kacamata amargi socanipun mboten sae.",
+        "indonesian": "Kakek memakai kacamata karena matanya kurang baik."
+      },
+      "hint": "Bagian tubuh ini ada di wajah, jumlahnya dua, dan dipakai untuk melihat.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "grana",
+      "word": "Grana",
+      "body_part": "Hidung",
+      "region": "head",
+      "anchor_id": "anchor_grana",
+      "ngoko": "irung",
+      "krama": "irung",
+      "krama_inggil": "grana",
+      "definition": "Hidung adalah alat penciuman sekaligus jalan masuk udara untuk bernapas.",
+      "example": {
+        "javanese": "Bapak nutupi grananipun nalika wonten kebul.",
+        "indonesian": "Bapak menutup hidungnya ketika ada asap."
+      },
+      "hint": "Bagian wajah ini ada di tengah, di antara mata dan mulut, dan dipakai untuk mencium bau.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "lathi",
+      "word": "Lathi",
+      "body_part": "Bibir/mulut",
+      "region": "head",
+      "anchor_id": "anchor_lathi",
+      "ngoko": "cangkem (mulut), lambe (bibir)",
+      "krama": "tutuk (mulut)",
+      "krama_inggil": "lathi",
+      "definition": "Mulut adalah bagian wajah untuk makan, minum, dan berbicara. Bibir adalah tepi mulut yang dapat digerakkan.",
+      "example": {
+        "javanese": "Lathinipun Eyang mesem nalika mriksani putunipun.",
+        "indonesian": "Bibir/mulut Nenek tersenyum ketika melihat cucunya."
+      },
+      "hint": "Bagian wajah ini ada di bawah hidung dan dipakai untuk berbicara serta makan.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "jangga",
+      "word": "Jangga",
+      "body_part": "Leher",
+      "region": "torso",
+      "anchor_id": "anchor_jangga",
+      "ngoko": "gulu",
+      "krama": "griwa",
+      "krama_inggil": "jangga",
+      "definition": "Leher adalah bagian tubuh yang menghubungkan kepala dengan badan dan menopang kepala.",
+      "example": {
+        "javanese": "Eyang putri ngagem kalung ing jangganipun.",
+        "indonesian": "Nenek memakai kalung di lehernya."
+      },
+      "hint": "Bagian tubuh ini menghubungkan kepala dengan badan.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "talingan",
+      "word": "Talingan",
+      "body_part": "Telinga",
+      "region": "head",
+      "anchor_id": "anchor_talingan",
+      "ngoko": "kuping",
+      "krama": "kuping",
+      "krama_inggil": "talingan",
+      "definition": "Telinga adalah alat pendengaran. Dengan telinga kita menangkap suara.",
+      "example": {
+        "javanese": "Eyang ngagem alat bantu pamireng ing talinganipun.",
+        "indonesian": "Kakek memakai alat bantu dengar di telinganya."
+      },
+      "hint": "Bagian tubuh ini ada di sisi kepala, jumlahnya dua, dan dipakai untuk mendengar.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "padharan",
+      "word": "Padharan",
+      "body_part": "Perut",
+      "region": "torso",
+      "anchor_id": "anchor_padharan",
+      "ngoko": "weteng",
+      "krama": "weteng",
+      "krama_inggil": "padharan",
+      "definition": "Perut adalah bagian badan di bawah dada tempat makanan dicerna.",
+      "example": {
+        "javanese": "Padharanipun Bapak sakit amargi dereng dhahar.",
+        "indonesian": "Perut Bapak sakit karena belum makan."
+      },
+      "hint": "Bagian badan ini ada di bawah dada, tempat makanan dicerna.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "asta",
+      "word": "Asta",
+      "body_part": "Tangan",
+      "region": "arm",
+      "anchor_id": "anchor_asta",
+      "ngoko": "tangan",
+      "krama": "tangan",
+      "krama_inggil": "asta",
+      "definition": "Tangan adalah anggota gerak atas yang dipakai untuk memegang, mengambil, dan menulis.",
+      "example": {
+        "javanese": "Pak Guru nyerat ngginakaken astanipun.",
+        "indonesian": "Pak Guru menulis dengan tangannya."
+      },
+      "hint": "Anggota gerak atas ini dipakai untuk memegang dan menulis.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "racikan",
+      "word": "Racikan",
+      "body_part": "Kaki",
+      "region": "leg",
+      "anchor_id": "anchor_racikan",
+      "ngoko": "sikil",
+      "krama": "suku",
+      "krama_inggil": "racikan",
+      "definition": "Kaki adalah anggota gerak bawah yang dipakai untuk berdiri, berjalan, dan berlari.",
+      "example": {
+        "javanese": "Eyang kakung ngraos lara ing racikanipun.",
+        "indonesian": "Kakek merasa sakit di kakinya."
+      },
+      "hint": "Anggota gerak bawah ini dipakai untuk berdiri dan berjalan.",
+      "validation_status": "needs_validation_high",
+      "validation_note": "The Word design lists 'racikan' for leg (kaki), but common sources give 'sampeyan' or 'pada' as the krama inggil for the leg. A Javanese-language expert must confirm whether 'racikan' means the leg, a part of the leg (for example the calf), or is a typo. Adjust the example sentence accordingly. Do not show the krama inggil value to students until validated."
+    },
+    {
+      "id": "jaja",
+      "word": "Jaja",
+      "body_part": "Dada",
+      "region": "torso",
+      "anchor_id": "anchor_jaja",
+      "ngoko": "dhadha",
+      "krama": "dhadha",
+      "krama_inggil": "jaja",
+      "definition": "Dada adalah bagian badan depan di bawah leher. Di dalamnya ada jantung dan paru-paru.",
+      "example": {
+        "javanese": "Bapak nyekel jajanipun amargi ngraos sesak.",
+        "indonesian": "Bapak memegang dadanya karena merasa sesak."
+      },
+      "hint": "Bagian badan depan ini ada di bawah leher dan di atas perut.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "ampeyan",
+      "word": "Ampeyan",
+      "body_part": "Telapak kaki",
+      "region": "leg",
+      "anchor_id": "anchor_ampeyan",
+      "ngoko": "dlamakan",
+      "krama": "dlamakan",
+      "krama_inggil": "ampeyan",
+      "definition": "Telapak kaki adalah bagian bawah kaki yang menyentuh tanah ketika kita berdiri.",
+      "example": {
+        "javanese": "Ampeyanipun Adhik reged amargi dolanan ing latar.",
+        "indonesian": "Telapak kaki Adik kotor karena bermain di halaman."
+      },
+      "hint": "Bagian ini ada di ujung bawah tubuh dan menyentuh tanah saat kita berdiri.",
+      "validation_status": "needs_validation_high",
+      "validation_note": "'Sampeyan' is commonly known as a form for the leg. A Javanese-language expert must confirm whether 'ampeyan' means the sole of the foot or the leg in general, and check the ngoko and krama equivalents. Do not show the krama inggil value to students until validated."
+    },
+    {
+      "id": "jengku",
+      "word": "Jengku",
+      "body_part": "Lutut",
+      "region": "leg",
+      "anchor_id": "anchor_jengku",
+      "ngoko": "dhengkul",
+      "krama": "dhengkul",
+      "krama_inggil": "jengku",
+      "definition": "Lutut adalah sendi di tengah kaki yang menghubungkan paha dan betis sehingga kaki dapat ditekuk.",
+      "example": {
+        "javanese": "Eyang ngraos nyeri ing jengkunipun nalika minggah tangga.",
+        "indonesian": "Nenek merasa nyeri di lututnya ketika naik tangga."
+      },
+      "hint": "Sendi di tengah kaki ini membuat kaki bisa ditekuk.",
+      "validation_status": "needs_validation"
+    },
+    {
+      "id": "pamidhangan",
+      "word": "Pamidhangan",
+      "body_part": "Bahu",
+      "region": "torso",
+      "anchor_id": "anchor_pamidhangan",
+      "ngoko": "pundhak",
+      "krama": "pundhak",
+      "krama_inggil": "pamidhangan",
+      "definition": "Bahu adalah bagian badan di antara leher dan lengan, tempat lengan bertumpu dan tas biasa disandang.",
+      "example": {
+        "javanese": "Bapak nyandhang tas ing pamidhanganipun.",
+        "indonesian": "Bapak menyandang tas di bahunya."
+      },
+      "hint": "Bagian ini ada di antara leher dan lengan, sering dipakai untuk menyandang tas.",
+      "validation_status": "needs_validation"
+    }
+  ]
+}
