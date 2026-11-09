@@ -91,3 +91,4 @@ describe("Phase 3: 3D Scene and Anchors Verification", () => {
     expect(anchors.asta.position[2]).toBeGreaterThan(0.05);
   });
 });
+

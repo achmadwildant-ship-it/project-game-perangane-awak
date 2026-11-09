@@ -7,8 +7,9 @@
 | 0 | Check | done | Node v26.13.0, npm 11.20.0, Git 2.56.0.4 installed via winget. Git identity set for repo only. Initial commit done. Model file verified. |
 | 1 | Scaffold | done | Vite + TS (strict) + Three.js + Vitest. src/config.ts, src/copy.ts, data-loader & validator. Tests and build pass. |
 | 2 | Core logic | done | Pure core functions: score.ts (7 spec cases + clamping), distractors.ts (1,000 seeds × 14 words passed, min separation 0.15, region diversity >= 2), session.ts (state machine, hint limits, word switching, debounce). All 36 tests pass. |
-| 3 | 3D scene and points | done | GLTF loader & normalization (scale 1.75 / height, center X/Z, min Y=0), OrbitControls with distance & polar limits (down to 25° below floor), HotspotManager with screen projection & raycast occlusion, dev tools (/anchor-check, /anchor-editor, /anchor-verify). 42 unit & scene tests pass. Reached Checkpoint B. |
-| 4 | Full game | todo | |
+| 3 | 3D scene and points | done | GLTF loader & normalization (scale 1.75 / height, center X/Z, min Y=0), OrbitControls with distance & polar limits (down to 25° below floor), HotspotManager with screen projection & raycast occlusion, dev tools (/anchor-check, /anchor-editor, /anchor-verify). 42 unit & scene tests pass. Checkpoint B approved. |
+| 4 | Full game | done | Complete flow: Splash -> Identity -> Home -> Instructions -> Materials -> Gameplay -> Learning Panel -> Result -> Settings. Web Audio synthesis tones. Word tray 14 words with active/done states. Full game flow test verified 14 words with score formula. 45 tests pass. |
+| 5 | Polish and QA | running | Checking widths (360px, 768px, 1280px), 48px touch targets, keyboard navigation, performance metrics, and error boundaries. |
 | 4 | Full game | todo | |
 | 5 | Polish and QA | todo | |
 | 6 | Publish-ready | todo | |
