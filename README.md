@@ -88,3 +88,4 @@ perangane-awak/
 4. Select each body part from the dropdown and click on the corresponding surface of your new 3D model.
 5. Click **"Unduh anchors.json yang Diperbarui"** to download the new coordinate file and replace `data/anchors.json`.
 6. Run `npm run test` to ensure all 14 points meet the separation and spatial bounds requirements.
+

@@ -78,3 +78,4 @@ Beberapa hal penting berikut ini berada di luar kendali agen AI dan harus disele
    - Amati interaksi siswa saat memainkan game: apakah mereka mudah mengenali nama bagian tubuh dan memahami cara memutar model 3D.
 5. **Publikasi ke Hosting Publik:**
    - Ikuti langkah praktis pada berkas `DEPLOY_GUIDE.md` untuk mengunggah folder `dist/` ke Netlify atau GitHub Pages.
+

@@ -91,3 +91,4 @@ export function showLearningPanel(word: VocabWord, onClose: () => void) {
 
   document.body.appendChild(overlay);
 }
+

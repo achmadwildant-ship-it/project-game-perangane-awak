@@ -97,3 +97,4 @@ export function showResultModal(
 
   document.body.appendChild(overlay);
 }
+

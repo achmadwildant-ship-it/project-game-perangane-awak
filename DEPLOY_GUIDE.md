@@ -54,3 +54,4 @@ Jika Anda ingin menghosting proyek ini di GitHub Pages (contoh: `https://usernam
 
 ## Persyaratan HTTPS
 Peramban modern mengharuskan protokol aman **HTTPS** untuk menjalankan fitur grafis WebGL dan API sentuh layar dengan performa penuh. Baik Netlify maupun GitHub Pages telah menyediakan sertifikat SSL gratis secara otomatis.
+
