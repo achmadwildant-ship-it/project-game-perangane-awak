@@ -1,0 +1,89 @@
+export const COPY = {
+  feedback: {
+    correct: "Sugeng! Wangsulan panjenengan leres!",
+    wrong: "Adhuh! Wangsulan panjenengan dereng leres. Coba malih.",
+  },
+  result: {
+    message: "Selamat, {name}! Kamu telah menyelesaikan permainan Perangane Awak.",
+    category: {
+      best: "Sae Sanget",
+      good: "Sae",
+      fair: "Cekap",
+      low: "Kedah Sinau Malih",
+    },
+  },
+  button: {
+    start: "Mulai Permainan",
+    next: "Lanjut",
+    hint: "Bantuan",
+    resetView: "Reset Tampilan",
+    playAgain: "Main Lagi",
+    home: "Beranda",
+  },
+  home: {
+    play: "Mulai Bermain",
+    instructions: "Petunjuk",
+    materials: "Materi",
+    settings: "Pengaturan",
+  },
+  name: {
+    label: "Nama siswa",
+    error: "Nama wajib diisi.",
+  },
+  hint: {
+    remaining: "Bantuan tersisa: {n}",
+  },
+  credit: "Model 3D: {name}",
+  // Additional UI text (agent-written, friendly Indonesian)
+  splash: {
+    title: "Perangane Awak",
+    subtitle: "Ayo belajar bagian tubuh dalam bahasa Jawa!",
+    enter: "Masuk",
+  },
+  instructions: {
+    title: "Petunjuk Permainan",
+    steps: [
+      "Pilih salah satu kata dari daftar di bawah layar.",
+      "Lima titik akan muncul pada model 3D. Satu titik adalah jawaban yang benar.",
+      "Putar dan perbesar model untuk melihat dengan jelas.",
+      "Ketuk titik yang menurut kamu benar.",
+      "Jawaban benar: kamu mendapat poin dan melihat materi pembelajaran.",
+      "Jawaban salah: kamu kehilangan 2 poin, tapi bisa mencoba lagi.",
+      "Gunakan tombol Bantuan jika kesulitan (maksimal 3 kali per permainan).",
+      "Selesaikan semua 14 kata untuk melihat hasil akhir.",
+    ],
+  },
+  settings: {
+    title: "Pengaturan",
+    sound: "Suara",
+    soundOn: "Nyala",
+    soundOff: "Mati",
+    textSize: "Ukuran Teks",
+    textNormal: "Normal",
+    textLarge: "Besar",
+    restart: "Mulai Ulang Sesi",
+    restartConfirm: "Yakin ingin mulai ulang? Semua progres akan hilang.",
+  },
+  materials: {
+    title: "Materi",
+    ngoko: "Ngoko",
+    krama: "Krama",
+    kramaInggil: "Krama Inggil",
+    example: "Contoh Kalimat",
+    meaning: "Arti",
+    definition: "Pengertian",
+    sameAsNgoko: "Sama dengan ngoko",
+    notAvailable: "Belum dikonfirmasi",
+  },
+  game: {
+    score: "Skor",
+    progress: "Progres",
+    wordListTitle: "Daftar Kata",
+  },
+  error: {
+    modelLoadFailed: "Gagal memuat model 3D. Silakan muat ulang halaman.",
+    dataLoadFailed: "Gagal memuat data permainan. Silakan muat ulang halaman.",
+    webglUnavailable: "Browser kamu tidak mendukung WebGL. Silakan gunakan browser lain.",
+  },
+  loading: "Memuat model 3D...",
+} as const;
