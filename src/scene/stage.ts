@@ -2,6 +2,19 @@ import * as THREE from "three";
 import { loadCharacterModel, type LoadedModel } from "./loader";
 import { createCameraManager, type CameraManager } from "./camera";
 import { HotspotManager } from "./hotspots";
+import { COPY } from "../copy";
+
+function isWebGLAvailable(): boolean {
+  try {
+    const canvas = document.createElement("canvas");
+    return !!(
+      window.WebGLRenderingContext &&
+      (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
+    );
+  } catch {
+    return false;
+  }
+}
 
 export interface GameSceneStage {
   container: HTMLElement;
@@ -27,6 +40,10 @@ export async function createGameSceneStage(
   options: StageOptions,
 ): Promise<GameSceneStage> {
   const { container, modelUrl, onPointClick, onProgress } = options;
+
+  if (!isWebGLAvailable()) {
+    throw new Error(COPY.error.webglUnavailable);
+  }
 
   // 1. Setup renderer
   const renderer = new THREE.WebGLRenderer({
