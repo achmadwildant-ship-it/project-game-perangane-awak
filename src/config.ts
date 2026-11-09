@@ -1,4 +1,4 @@
-export const MODEL_PATH = "/model/karakter-wildan-byNesya.glb";
+export const MODEL_PATH = `${import.meta.env.BASE_URL}model/karakter-wildan-byNesya.glb`;
 export const WORD_COUNT = 14;
 export const WRONG_PENALTY = 2;
 export const MAX_HINTS_PER_SESSION = 3;
