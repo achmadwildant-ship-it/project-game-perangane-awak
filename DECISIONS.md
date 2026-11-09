@@ -17,5 +17,6 @@ The agent reads this file. Change a value here if the designer decides otherwise
 | K-11 | Rounding | two decimals |
 | K-12 | Ampeyan point (sole faces down) | on top/side of the foot; camera may look up to 25 degrees below the floor line |
 | K-13 | Model permission and credit | not yet confirmed; show a credit line in the splash or result page |
+| K-14 | Prompt shows Javanese word only | yes (during active question, show only the Javanese word, e.g. "Rikma", never its Indonesian meaning; Indonesian meaning allowed only in learning panel and materials) |
 
 Model credit name (fill in before publishing): _______________________

@@ -102,7 +102,7 @@ Additions [PROPOSAL]: trim whitespace, maximum 30 characters, store in `sessionS
 ## 7. Core gameplay
 
 ### 7.1 Steps [ORIGINAL]
-1. The student selects one of 14 words from the list at the bottom of the screen. The selected word becomes the active word.
+1. The student selects one of 14 words from the list at the bottom of the screen. The selected word becomes the active word. While a question is active, the UI must show ONLY the Javanese word (e.g. "Rikma"), never its Indonesian meaning (DECISIONS.md K-14).
 2. The system shows five points: one correct and four distractors.
 3. Distractors and visual markers (order/labels) are randomized per question. The anatomical positions themselves are never randomized.
 4. The student may zoom and rotate freely at any time, including while points are visible.
@@ -266,7 +266,7 @@ Result storage [PROPOSAL]: on screen only for the session. If teachers or resear
 | Home | Play, instructions, materials, settings |
 | Instructions | How to pick a word, pick a point, control the model, use hints, understand scoring |
 | Materials | List of words and explanations |
-| Gameplay | 3D/AR model, active word, five points, zoom/rotate controls, hint button, progress, score |
+| Gameplay | 3D/AR model, active word (Javanese word only without Indonesian meaning per K-14), five points, zoom/rotate controls, hint button, progress, score |
 | Learning panel | Definition, speech levels, example sentence, continue button |
 | Final result | Name, score, answer statistics, hints used, play-again button |
 
@@ -431,5 +431,8 @@ The student enters a name and picks one of 14 body-part words. Five points appea
 | name.error | Nama wajib diisi. |
 | hint.remaining | Bantuan tersisa: {n} |
 | credit | Model 3D: {name} |
+| prompt.heading | Cari bagian tubuh: |
+
+Rule K-14: During active question, prompt and word list show ONLY the Javanese word (e.g. "Rikma"), never its Indonesian meaning (never "Rikma (Rambut)"). Indonesian meaning is allowed only in the learning panel after a correct answer and on the Materials page.
 
 Any other label the UI needs (instructions page text, settings labels, error messages) must be short, friendly Indonesian written by the agent and collected in `src/copy.ts`.

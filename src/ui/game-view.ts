@@ -53,6 +53,11 @@ export class GameView {
     }
   }
 
+  public setScreen(screen: ScreenState) {
+    this.currentScreen = screen;
+    this.render();
+  }
+
   public render() {
     this.container.innerHTML = "";
     if (this.currentScreen === "splash") {
@@ -295,10 +300,10 @@ export class GameView {
           <!-- Active Question Banner (Center) -->
           <div style="display: flex; flex-direction: column; align-items: center;">
             <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">
-              Cari bagian tubuh:
+              ${COPY.game.promptHeading}
             </div>
-            <div style="font-size: 1.25rem; font-weight: 800; color: var(--primary-dark);">
-              ${currentWord.word} <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-muted);">(${currentWord.body_part})</span>
+            <div id="active-word-text" style="font-size: 1.25rem; font-weight: 800; color: var(--primary-dark);">
+              ${currentWord.word}
             </div>
           </div>
 
@@ -394,6 +399,13 @@ export class GameView {
     }).then((stage) => {
       this.stage = stage;
       this.updateActiveWordPoints();
+    }).catch((err) => {
+      // WebGL unavailable fallback
+      const notice = document.createElement("div");
+      notice.className = "webgl-notice";
+      notice.style.cssText = "padding: 16px; text-align: center; color: var(--color-wrong); font-size: 0.9rem;";
+      notice.innerText = err instanceof Error ? err.message : String(err);
+      stageContainer.appendChild(notice);
     });
   }
 
@@ -410,7 +422,8 @@ export class GameView {
       const btn = document.createElement("button");
       btn.className = `word-pill ${isActive ? "active" : ""} ${isDone ? "done" : ""}`;
       btn.innerHTML = `${isDone ? "✓ " : ""}${w.word}`;
-      btn.setAttribute("aria-label", `${w.word} (${w.body_part})`);
+      btn.setAttribute("aria-label", w.word);
+      btn.setAttribute("title", w.word);
 
       btn.addEventListener("click", () => {
         if (!this.debouncer()) return;

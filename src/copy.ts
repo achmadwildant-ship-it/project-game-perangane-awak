@@ -79,6 +79,7 @@ export const COPY = {
     score: "Skor",
     progress: "Progres",
     wordListTitle: "Daftar Kata",
+    promptHeading: "Cari bagian tubuh:",
   },
   error: {
     modelLoadFailed: "Gagal memuat model 3D. Silakan muat ulang halaman.",
