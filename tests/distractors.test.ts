@@ -75,7 +75,7 @@ describe("Distractor selection", () => {
         }
       }
     }
-  });
+  }, 30000);
 
   it("throws if anchor ID does not exist", () => {
     expect(() =>

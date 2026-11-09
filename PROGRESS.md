@@ -5,9 +5,9 @@
 | Phase | Name | Status | Notes |
 |---|---|---|---|
 | 0 | Check | done | Node v26.13.0, npm 11.20.0, Git 2.56.0.4 installed via winget. Git identity set for repo only. Initial commit done. Model file verified. |
-| 1 | Scaffold | todo | |
-| 2 | Core logic | todo | |
-| 3 | 3D scene and points | todo | |
+| 1 | Scaffold | done | Vite + TS (strict) + Three.js + Vitest. src/config.ts, src/copy.ts, data-loader & validator. Tests and build pass. |
+| 2 | Core logic | done | Pure core functions: score.ts (7 spec cases + clamping), distractors.ts (1,000 seeds × 14 words passed, min separation 0.15, region diversity >= 2), session.ts (state machine, hint limits, word switching, debounce). All 36 tests pass. |
+| 3 | 3D scene and points | running | |
 | 4 | Full game | todo | |
 | 5 | Polish and QA | todo | |
 | 6 | Publish-ready | todo | |

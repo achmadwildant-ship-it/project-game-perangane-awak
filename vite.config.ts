@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
-import path from "path";
+import { fileURLToPath, URL } from "node:url";
 
 export default defineConfig(({ mode }) => ({
   base: process.env.VITE_BASE ?? "/",
   resolve: {
-    alias: { "@": path.resolve(__dirname, "src") },
+    alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
   },
   build: {
     rollupOptions: {

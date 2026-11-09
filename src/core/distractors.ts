@@ -1,19 +1,21 @@
 import { POINT_COUNT, MIN_SEPARATION, MIN_SEPARATION_FALLBACK, MIN_DISTRACTORS_OTHER_REGION } from "../config";
 import type { AnchorPoint, GamePoint, Region } from "./types";
 
-/** Euclidean distance between two 3D positions */
-function distance(a: [number, number, number], b: [number, number, number]): number {
+/** Squared Euclidean distance between two 3D positions */
+function distanceSq(a: [number, number, number], b: [number, number, number]): number {
   const dx = a[0] - b[0];
   const dy = a[1] - b[1];
   const dz = a[2] - b[2];
-  return Math.sqrt(dx * dx + dy * dy + dz * dz);
+  return dx * dx + dy * dy + dz * dz;
 }
 
 /** Shuffle array in place (Fisher-Yates) */
 function shuffle<T>(arr: T[], rng: () => number = Math.random): T[] {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
-    [arr[i], arr[j]] = [arr[j]!, arr[i]!];
+    const tmp = arr[i]!;
+    arr[i] = arr[j]!;
+    arr[j] = tmp;
   }
   return arr;
 }
@@ -63,37 +65,43 @@ export function selectPoints(
   }
 
   for (const minSep of separationSteps) {
+    const minSepSq = minSep * minSep;
+
     // Filter candidates that are far enough from the correct point
     const eligible = allCandidates.filter(
-      (c) => distance(c.position, correctPos) >= minSep,
+      (c) => distanceSq(c.position, correctPos) >= minSepSq,
     );
 
     // Separate into same-region and other-region
     const otherRegion = eligible.filter((c) => c.region !== correctRegion);
     const sameRegion = eligible.filter((c) => c.region === correctRegion);
 
+    // Reusable buffers for attempts
+    const otherCopy = [...otherRegion];
+    const sameCopy = [...sameRegion];
+
     // Try multiple random orderings
     for (let attempt = 0; attempt < 50; attempt++) {
-      const shuffledOther = shuffle([...otherRegion], rng);
-      const shuffledSame = shuffle([...sameRegion], rng);
+      shuffle(otherCopy, rng);
+      shuffle(sameCopy, rng);
 
       const selected: CandidateInfo[] = [];
       let otherCount = 0;
 
-      // Greedy pick: try other-region first to meet the minimum
-      const pickOrder = [...shuffledOther, ...shuffledSame];
+      // Greedy pick: other-region first to meet the minimum
+      for (let i = 0; i < otherCopy.length && selected.length < distractorCount; i++) {
+        const candidate = otherCopy[i]!;
+        if (!selected.some((s) => distanceSq(s.position, candidate.position) < minSepSq)) {
+          selected.push(candidate);
+          otherCount++;
+        }
+      }
 
-      for (const candidate of pickOrder) {
-        if (selected.length >= distractorCount) break;
-
-        // Check separation with all already-selected
-        const tooClose = selected.some(
-          (s) => distance(s.position, candidate.position) < minSep,
-        );
-        if (tooClose) continue;
-
-        selected.push(candidate);
-        if (candidate.region !== correctRegion) otherCount++;
+      for (let i = 0; i < sameCopy.length && selected.length < distractorCount; i++) {
+        const candidate = sameCopy[i]!;
+        if (!selected.some((s) => distanceSq(s.position, candidate.position) < minSepSq)) {
+          selected.push(candidate);
+        }
       }
 
       if (
@@ -103,11 +111,14 @@ export function selectPoints(
         // Success: build the labeled point array
         const allPoints: { id: string }[] = [
           { id: correctId },
-          ...selected.map((s) => ({ id: s.id })),
+          { id: selected[0]!.id },
+          { id: selected[1]!.id },
+          { id: selected[2]!.id },
+          { id: selected[3]!.id },
         ];
         shuffle(allPoints, rng);
 
-        const labels = ["A", "B", "C", "D", "E"];
+        const labels = ["A", "B", "C", "D", "E"] as const;
         return allPoints.map((p, i) => ({
           id: p.id,
           label: labels[i]!,
