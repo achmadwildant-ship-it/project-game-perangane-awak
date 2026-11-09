@@ -40,7 +40,7 @@ The model file name is fixed: `public/model/karakter-wildan-byNesya.glb`. Refere
 9. Touch targets at least 48 px. Verify at widths 360 px and 1280 px.
 10. AR must never break the 3D-on-screen mode. The AR button appears only if support is detected, and only if `DECISIONS.md` K-01 is "yes".
 11. Add no dependency without a written reason in `PROGRESS.md`.
-12. Run `npm run test` and `npm run build` before declaring a phase done. Report what was tested and what was not. Never delete or weaken a test to make it pass.
+12. Run `npm run test` and `npm run build` before declaring a phase done. Report what was tested and what was not. Never delete or weaken a test to make it pass. Before declaring any phase or revision done, `npm run verify` must pass, including the dev-server check.
 13. Commit after each phase passes its gates.
 
 ## Code style

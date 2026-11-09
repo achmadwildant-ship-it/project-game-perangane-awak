@@ -12,10 +12,9 @@
 | 5 | Polish and QA | done | Responsive layout for 360px, 768px, 1280px; touch targets >= 48px; keyboard accessibility; WebGL & data error boundary; performance: 2 draw calls, bundle 174kB gzipped, 60fps capable. |
 | 6 | Publish-ready | done | Created README.md, netlify.toml, DEPLOY_GUIDE.md, FINAL_REPORT.md. Build dist/ verified via preview server (HTTP 200). Checkpoint C reached. |
 | 7 | AR | skip | K-01 = "no" (3D-on-screen is main mode per DECISIONS.md). |
-| 4 | Full game | todo | |
-| 5 | Polish and QA | todo | |
-| 6 | Publish-ready | todo | |
-| 7 | AR | skip | K-01 = "no" |
+| Revision | K-14 Prompt text | done | Show only Javanese word during gameplay. |
+| Revision | K-13 Hide credit | done | Controlled via SHOW_MODEL_CREDIT & MODEL_CREDIT_NAME (default false). |
+| Fix | Config deduplication & Dev check | done | Removed duplicate config declarations, added check-dev-server.js to verify gate. |
 
 ## Implementation plan
 
