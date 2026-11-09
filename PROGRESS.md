@@ -10,7 +10,8 @@
 | 3 | 3D scene and points | done | GLTF loader & normalization (scale 1.75 / height, center X/Z, min Y=0), OrbitControls with distance & polar limits (down to 25° below floor), HotspotManager with screen projection & raycast occlusion, dev tools (/anchor-check, /anchor-editor, /anchor-verify). 42 unit & scene tests pass. Checkpoint B approved. |
 | 4 | Full game | done | Complete flow: Splash -> Identity -> Home -> Instructions -> Materials -> Gameplay -> Learning Panel -> Result -> Settings. Web Audio synthesis tones. Word tray 14 words with active/done states. Full game flow test verified 14 words with score formula. 45 tests pass. |
 | 5 | Polish and QA | done | Responsive layout for 360px, 768px, 1280px; touch targets >= 48px; keyboard accessibility; WebGL & data error boundary; performance: 2 draw calls, bundle 174kB gzipped, 60fps capable. |
-| 6 | Publish-ready | running | Creating README.md, netlify.toml, DEPLOY_GUIDE.md, and FINAL_REPORT.md. Verifying production preview. |
+| 6 | Publish-ready | done | Created README.md, netlify.toml, DEPLOY_GUIDE.md, FINAL_REPORT.md. Build dist/ verified via preview server (HTTP 200). Checkpoint C reached. |
+| 7 | AR | skip | K-01 = "no" (3D-on-screen is main mode per DECISIONS.md). |
 | 4 | Full game | todo | |
 | 5 | Polish and QA | todo | |
 | 6 | Publish-ready | todo | |
