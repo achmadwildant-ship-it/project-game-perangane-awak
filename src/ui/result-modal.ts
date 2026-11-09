@@ -14,7 +14,6 @@ export function showResultModal(
 
   const category = getScoreCategory(score.raw);
   const appreciationMsg = COPY.result.message.replace("{name}", session.name);
-  const creditMsg = COPY.credit.replace("{name}", "Nesya");
 
   let badgeColor = "#15803d";
   let badgeBg = "#dcfce7";
@@ -65,10 +64,6 @@ export function showResultModal(
             <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Bantuan</div>
             <div style="font-size: 1.4rem; font-weight: 700; color: #4338ca;">${session.hintsUsed} / 3</div>
           </div>
-        </div>
-
-        <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
-          ${creditMsg}
         </div>
       </div>
 

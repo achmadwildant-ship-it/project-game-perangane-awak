@@ -96,6 +96,7 @@
 |---|---|---|
 | Git identity | Repo-local "Perangane Awak" / agent@example.com | Per MAIN_PROMPT.md instructions; global settings untouched |
 | AR (Phase 7) | Skipped | K-01 = "no" |
+| K-13 | Model credit line hidden | Designer revision: model credit line hidden by default; controlled by SHOW_MODEL_CREDIT and MODEL_CREDIT_NAME in src/config.ts. Hardcoded creator names removed from code and UI. |
 | K-14 | Prompt shows Javanese word only | Designer revision: prompt, word pills, tooltips, hints, and feedback show ONLY the Javanese word (e.g. "Rikma"), never Indonesian meaning during gameplay. Indonesian meaning allowed only in learning panel and materials page. |
 | Dependency addition | happy-dom (devDependency) | Added devDependency for testing DOM gameplay elements in Vitest per Task 2 requirements. |
 

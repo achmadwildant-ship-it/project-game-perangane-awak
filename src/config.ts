@@ -22,3 +22,10 @@ export const SCORE_PER_WORD = 100 / 14;
 export const MAX_NAME_LENGTH = 30;
 export const DOT_VISUAL_RADIUS_PX = 15;
 export const OCCLUSION_TOLERANCE = 0.02;
+export let SHOW_MODEL_CREDIT = false;
+export let MODEL_CREDIT_NAME = "";
+
+export function setModelCreditConfig(show: boolean, name: string) {
+  SHOW_MODEL_CREDIT = show;
+  MODEL_CREDIT_NAME = name;
+}

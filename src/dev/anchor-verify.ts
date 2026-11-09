@@ -21,7 +21,7 @@ export function renderAnchorVerify(container: HTMLElement) {
           <div>
             <h1 style="margin: 0; font-size: 1.8rem; color: #fbbf24;">Verifikasi 14 Titik Koordinat (Checkpoint B)</h1>
             <p style="margin: 6px 0 0; color: #94a3b8; font-size: 0.95rem;">
-              Halaman ringkas verifikasi visual seluruh 14 titik anggota tubuh pada model 3D <code>karakter-wildan-byNesya.glb</code>.
+              Halaman ringkas verifikasi visual seluruh 14 titik anggota tubuh pada model 3D.
             </p>
           </div>
           <div style="display: flex; gap: 8px;">

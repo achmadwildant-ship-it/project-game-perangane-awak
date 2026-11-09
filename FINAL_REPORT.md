@@ -70,8 +70,8 @@ Beberapa hal penting berikut ini berada di luar kendali agen AI dan harus disele
    - Mintalah guru bahasa Jawa untuk memeriksa kembali kosakata *Racikan* (kaki) dan *Ampeyan* (telapak kaki) beserta contoh kalimatnya pada `data/vocab.json`.
    - Jika sudah diverifikasi, ubah `validation_status` menjadi `"validated"` agar teks *krama inggil*-nya dapat ditampilkan kepada siswa.
 2. **Konfirmasi Izin Model 3D & Hak Cipta (Keputusan K-13):**
-   - Pastikan izin tertulis penggunaan model `karakter-wildan-byNesya.glb` dari pembuatnya (Nesya/Wildan).
-   - Isi nama lengkap pembuat pada baris atribusi di `DECISIONS.md`.
+   - Baris kredit model saat ini disembunyikan secara bawaan sesuai keputusan desainer (K-13), dan dapat diaktifkan melalui `SHOW_MODEL_CREDIT` serta `MODEL_CREDIT_NAME` di `src/config.ts`.
+   - Pastikan izin tertulis penggunaan model `karakter-wildan-byNesya.glb` dari pembuat aslinya tetap diperoleh sebelum publikasi.
 3. **Uji Coba Langsung pada Ponsel Pintar Siswa:**
    - Buka pratinjau web di ponsel Android dan iPhone untuk memastikan ukuran tombol sentuh (minimal 48px) nyaman untuk jemari siswa.
 4. **Uji Coba Pembelajaran di Kelas:**

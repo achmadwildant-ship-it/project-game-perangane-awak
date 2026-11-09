@@ -21,7 +21,13 @@ import {
 import { selectPoints } from "../core/distractors";
 import { calculateScore } from "../core/score";
 import { buildAnchorRegionMap } from "../core/data-loader";
-import { MAX_NAME_LENGTH, DISABLE_WRONG_DOTS, CLICK_DEBOUNCE_MS } from "../config";
+import {
+  MAX_NAME_LENGTH,
+  DISABLE_WRONG_DOTS,
+  CLICK_DEBOUNCE_MS,
+  SHOW_MODEL_CREDIT,
+  MODEL_CREDIT_NAME,
+} from "../config";
 import type { VocabData, AnchorsData, SessionState, GamePoint } from "../core/types";
 import * as THREE from "three";
 
@@ -73,6 +79,11 @@ export class GameView {
 
   // 1. Splash Screen
   private renderSplash() {
+    const creditHtml =
+      SHOW_MODEL_CREDIT && MODEL_CREDIT_NAME.trim() !== ""
+        ? `<div id="model-credit-line" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 20px;">${COPY.credit.replace("{name}", MODEL_CREDIT_NAME.trim())}</div>`
+        : "";
+
     this.container.innerHTML = `
       <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; padding: 24px; text-align: center; background: radial-gradient(circle at center, #fef3c7 0%, #f6f3ea 100%);">
         <div style="max-width: 440px; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 20px;">
@@ -90,11 +101,7 @@ export class GameView {
           
           <button id="splash-enter-btn" class="btn btn-primary" style="width: 100%; font-size: 1.15rem; margin-top: 10px;">
             ${COPY.splash.enter} →
-          </button>
-
-          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 20px;">
-            ${COPY.credit.replace("{name}", "Nesya")}
-          </div>
+          </button>${creditHtml}
         </div>
       </div>
     `;

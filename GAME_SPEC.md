@@ -274,7 +274,7 @@ Settings menu [PROPOSAL]: sound on/off, text size (normal/large), restart sessio
 
 Phone layout [PROPOSAL]: model fills the upper area; the 14-word list scrolls horizontally at the bottom; hint button and remaining-hint indicator in a corner; test widths 360 px to 1280 px.
 
-Design direction [PROPOSAL]: warm palette inspired by batik (deep brown, cream, gold), clear typography, large buttons, student-friendly, good contrast, no external assets. Optional sound through simple Web Audio tones (no audio files). Credit line in the splash or result page: "Model 3D: [name]" using the name in `DECISIONS.md` (K-13).
+Design direction [PROPOSAL]: warm palette inspired by batik (deep brown, cream, gold), clear typography, large buttons, student-friendly, good contrast, no external assets. Optional sound through simple Web Audio tones (no audio files). Credit line hidden by designer decision (K-13), controlled by `SHOW_MODEL_CREDIT` and `MODEL_CREDIT_NAME` in `src/config.ts`.
 
 ## 15. Requirements
 
@@ -430,7 +430,7 @@ The student enters a name and picks one of 14 body-part words. Five points appea
 | name.label | Nama siswa |
 | name.error | Nama wajib diisi. |
 | hint.remaining | Bantuan tersisa: {n} |
-| credit | Model 3D: {name} |
+| credit | Model 3D: {name} (hidden by default per K-13; controlled by SHOW_MODEL_CREDIT) |
 | prompt.heading | Cari bagian tubuh: |
 
 Rule K-14: During active question, prompt and word list show ONLY the Javanese word (e.g. "Rikma"), never its Indonesian meaning (never "Rikma (Rambut)"). Indonesian meaning is allowed only in the learning panel after a correct answer and on the Materials page.
