@@ -10,7 +10,7 @@ Code, comments, tests, commits, developer docs: English. Student-facing text: In
 
 ## How to work
 1. Create `PROGRESS.md` in the project root: list of phases, status (todo / running / done), decisions taken, open problems. Update it at the end of every phase. If your context is cut or a new session starts, read `PROGRESS.md` and continue from the first unfinished phase.
-2. Each phase has **quality gates**. A phase is not done until every gate passes. If a gate fails, fix the root cause. Never delete a test or loosen a criterion. At most three repair attempts per problem, then stop and report. Before declaring any phase or revision done, `npm run verify` must pass, including the dev-server check.
+2. Each phase has **quality gates**. A phase is not done until every gate passes. If a gate fails, fix the root cause. Never delete a test or loosen a criterion. At most three repair attempts per problem, then stop and report. Before declaring any phase or revision done, `npm run verify` must pass, including the dev-server check and the dist/ leak check (zero occurrences of anchor-editor, anchor-verify, anchor-check in the production bundle).
 3. Run commands yourself (npm, git, tests, build). After the gates pass, `git commit` with a message that names the phase.
 4. Verify visuals yourself with any browser access you have: run `npm run dev`, open pages, take screenshots, inspect them, and fix problems. If you have no browser access, say so explicitly and add automated tests instead.
 5. Add no dependency beyond the stack without a written reason in `PROGRESS.md`. Create no files outside the structure in `GAME_SPEC.md` section 17.2 except the ones named here.

@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "tsc --noEmit && vitest run",
-    "verify": "tsc --noEmit && vitest run && node scripts/check-dev-server.js && vite build"
+    "verify": "tsc --noEmit && vitest run && node scripts/check-dev-server.js && vite build && node scripts/check-dist.js"
   },
   "dependencies": {
     "@types/three": "^0.187.0",
